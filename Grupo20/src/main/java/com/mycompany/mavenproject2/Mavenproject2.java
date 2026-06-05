@@ -88,7 +88,7 @@ public class Mavenproject2 {
                     System.out.println("\n--- Retirar Monto ---");
                     System.out.print("Ingrese el monto en dolares que desea retirar");
                     double dolar3 = scanner.nextDouble();
-                    System.out.println("El nuevo monto es: " + Conversor.actualizarSaldo(saldo, dolar3) + " Dolares");        
+                    System.out.println("El nuevo monto es: " + Conversor.retirarMonto(saldo, dolar3) + " Dolares");        
                    
                     break;                    
                     
