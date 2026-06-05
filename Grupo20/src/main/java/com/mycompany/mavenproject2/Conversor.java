@@ -13,10 +13,7 @@ public class Conversor {
     double dolar;
     double saldo;
     
-    public Conversor(double pesos, double dolar, double saldo) {
-        this.pesos= pesos;
-        this.dolar= dolar;
-        this.saldo = saldo;
+    public Conversor() {
     }
     
 
