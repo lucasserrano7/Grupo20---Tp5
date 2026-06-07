@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.mavenproject2;
-
+import java.text.DecimalFormat;
 /**
  *
  * @author angel
@@ -25,11 +25,13 @@ public static double convertirADolar(double pesos, double dolar){
     
 }   
 
-public static double convertirAPesos(double pesos, double dolar){
+public static String convertirAPesos(double dolar, double cotizacion){
     
-    double resultado = pesos*dolar;
+    double resultado = dolar*cotizacion;
+    DecimalFormat df = new DecimalFormat("$ #,##0");
+    String resultado2 = df.format(resultado); 
     
-    return resultado;
+    return resultado2;
     
 }   
 
