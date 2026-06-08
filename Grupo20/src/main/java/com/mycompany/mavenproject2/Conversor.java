@@ -37,6 +37,10 @@ public static String convertirAPesos(double dolar, double cotizacion){
 
 public static double calcularCotizacion(double pesos, double dolar){
     
+      if(pesos == 0){
+        throw new ArithmeticException("Los pesos no pueden ser cero");
+    }
+    
     double resultado= pesos/dolar;
         
         
