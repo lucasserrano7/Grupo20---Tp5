@@ -11,12 +11,28 @@ package com.mycompany.mavenproject2;
 
     
  
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.TestInfo;
 
 public class ConversorTest {
-
+    
+    @BeforeAll
+    static void IniciarTest(){
+        System.out.println("Bienvenido al sistema de pruebas");
+    }
+    @BeforeEach
+     void beforeTest(TestInfo testinfo){
+        System.out.println("Corriendo prueba: " + testinfo.getDisplayName());
+    }
+    
     @Test
+    @DisplayName("Prueba aumentar saldo.")
     void testActualizarSaldo() {
 
         double resultado =
@@ -26,12 +42,22 @@ public class ConversorTest {
     }
 
     @Test
+    @DisplayName("Prueba retirar saldo.")
     void testRetirarMonto() {
 
         double resultado =
                 Conversor.retirarMonto(5000, 1000);
 
         assertEquals(4000, resultado, 0.001);
+    }
+
+    @AfterEach
+    void afterTest(){
+        System.out.println("Prueba finalizada, campos en $0");
+    }
+    @AfterAll
+    static void finTest(){
+        System.out.println("La operacion ha finalizado");
     }
 }
 
