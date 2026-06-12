@@ -24,9 +24,7 @@ public class DolaritosTest {
         "180000,1500,120",
         "100000,-900,-111.11"
     })
-    public void testCalcularCotizacion(double pesos,
-            double dolar,
-            double esperado) {
+    public void testCalcularCotizacion(double pesos, double dolar, double esperado) {
 
         double resultado = Conversor.calcularCotizacion(pesos, dolar);
 
