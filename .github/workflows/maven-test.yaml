@@ -19,3 +19,5 @@ jobs:
 
     - name: Ejecutar pruebas de JUnit 5 con Maven
       run: mvn --batch-mode clean test
+    - name: Run tests with Maven
+      run: mvn -f Grupo20/pom.xml test
